@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>home</title>
 </head>
+<hr>
 <body>
 	<a href="/WebSite/Login">Login</a>
 	<form action="/WebSite/Login" method="get">
@@ -14,6 +15,9 @@
 			type="password" name="password"><br> <input
 			type="submit" value="submit">
 	</form>
+	<%
+		out.println("Login");
+	%>
 </body>
-
+<hr>
 </html>
