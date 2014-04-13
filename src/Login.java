@@ -134,13 +134,11 @@ public class Login extends HttpServlet {
 		printWriter.println("<form action=/WebSite/LoginCl method=post>");
 		printWriter.println("用户名：<input type=text name=username><br>");
 		printWriter.println("密码：<input type=password name=password><br>");
-		printWriter
-				.println("<input type=checkbox name=userkeep value=2>两周内自动登录<br>");
+		printWriter.println("<input type=checkbox name=userkeep value=2>两周内自动登录<br>");
 		printWriter.println("<input type=submit value=登陆>");
 		printWriter.println("<a href=/WebSite/Signup>注册</a>");
 		printWriter.println("</form>");
-		int time = Integer.parseInt(this.getServletContext()
-				.getAttribute("visitTime").toString());
+		int time = Integer.parseInt(this.getServletContext().getAttribute("visitTime").toString());
 		time++;
 		this.getServletContext().setAttribute("visitTime", time + "");
 		printWriter.println("<h1>该网页被访问了 " + time + " 次</h1>");
